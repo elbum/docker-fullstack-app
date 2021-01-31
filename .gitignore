@@ -12,6 +12,9 @@
 # production
 /frontend/build
 
+# db
+/mysql/mysql_data
+
 # misc
 .DS_Store
 .env.local
