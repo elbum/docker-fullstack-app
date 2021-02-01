@@ -36,7 +36,7 @@ app.get('/api/values',(req,res)=>{
 
 // 클라이언트에서 입력된 글을 Insert
 app.post('/api/value',(req,res,next)=>{
-    db.pool.query('INSERT INTO lists (value) VALUES("${req.body.value}")',
+    db.pool.query(`INSERT INTO lists (value) VALUES("${req.body.value}")`,
     (err,results,fields)=>{
         if(err) res.status(500).send(err)
         else return res.json({success:true,value:req.body.value})
